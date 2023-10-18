@@ -15,17 +15,22 @@ header{
     justify-content: start;
     align-items: baseline;
     height: 150px;
-    width: 1422px;
+    width: 1421px;
     padding: 0px 0px 0px 0px;
     z-index: 1;
 }
 h1{
-    color:#03065e ; 
+    color:#2E2E73 ; 
     font-family: "raleway", sans-serif;
-    display: inline;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.titulos{
+    padding-top: 20px;
 }
 h2 {
-    color:#03065e ; 
+    color:#2E2E73 ; 
     font-family: "raleway", sans-serif;
     text-align: center;
 }
@@ -78,20 +83,31 @@ a{
     position: relative;
     bottom: 7px;
 }
+.navnone{
+    display: none;
+}
 .navbar{
     width: 800px;
     position: relative;
     right: 40px; 
+    top: 5px;
 }
 .log{
     display: flex;
     justify-content: left;
+    flex-flow: column;
+    align-items: center;
     height: 150px;
     width: 267px;
     background-color: rgb(244 238 225 / 0%);
 }
 .log img{
     width: 255px;
+}
+.log h1{
+    font-size: x-large;
+    position: relative;
+    bottom: 20px;
 }
 main{
     background-color: rgba(241, 234, 218, 0.815);
@@ -144,12 +160,18 @@ footer div{
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.imagenPromo p{
+    font-weight: bold;
 }
 .botonPromo{
     display: flex;
     justify-content: center;
     height: 100px;
     align-items: center;
+    padding-top: 20px;
 }
 .buttonClass {
     display: flex;
@@ -374,16 +396,18 @@ a:hover{
 @media (max-width:768px){
     header{
         flex-direction: column;
-        width: 715px;
+        width: 533px;
     }
     main{
-        width: 717px;
+        width: 533px;
     }
     .navegador{
         flex-direction: column;
+        width: 153px;
+        text-align: start;
     }
     .log{
-        width: 714px;
+        width: 533px;
         justify-content: center;
     }
     .log img{
@@ -396,8 +420,20 @@ a:hover{
        display: none;
     }
     .navbar{
+        width: 155px;
         position: relative;
-        bottom: 60px;
+        right: 18px;
+    }
+    .navnone{
+        display: inline;
+    }
+    .container-fluid{
+        position: relative;
+        bottom: 53px;
+    }
+    .carousel-inner{
+        width: 533px;
+        height: 333px;
     }
     .imagenPromo{
         flex-direction: column
@@ -412,7 +448,7 @@ a:hover{
         height: 35px;
     }
     footer{
-        width: 717px;
+        width: 533px;
     }
     .redes{
         display: none;
@@ -427,20 +463,33 @@ a:hover{
     .footerDerecho{
         display: none;
     }
+    .footerDerecho div{
+        width: 160px;
+        height: 50px;
+        display: flex;
+        position: relative;
+        
+    }
+    .textoalaDerecha img{
+        width: 20px;
+        height: 20px;
+    }
     .textoCopy{
         display: flex;
         justify-content: center;
-        width: 717px;
+        width: 533px;
         text-align: center;
     }
     .textoCopy p{
         font-size: 17px;
     }
+
 }
 @media (max-width:768px){
     .bannerUno{
         flex-direction: column-reverse;
         align-items: center;
+        margin-bottom: 15px;
     }
     .bannerUno div{
         margin-left: 0px;
@@ -462,4 +511,39 @@ a:hover{
         align-items: center;
     }
     
+}
+@media (max-width:768px){
+    .container img{
+        width: 198px;
+        height: 167px;
+    }
+    .container p{
+        font-size: small;
+    }
+    .container{
+        padding-left: 0%;
+        padding-right: 0%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 2fr;
+        grid-template-rows: 2fr 2fr 2fr;
+        gap: 20px;
+        padding-top: 50px;
+        grid-template-areas:
+            "lista uno dos"
+            "lista cuatro cinco "
+            "lista tres seis";
+    }
+    .listaProductos{
+        font-size: small;
+        margin-left: 0%;
+    }
+    .listaProductos h3{
+        font-size: medium;
+    }
+}
+@media (max-width:768px){
+    .mapaIframe iframe{
+        width: 476px;
+        height: 285px;
+    }
 }
