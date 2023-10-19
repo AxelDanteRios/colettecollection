@@ -1,0 +1,36 @@
+@media (max-width:768px){
+    .container img{
+        width: 198px;
+        height: 167px;
+    }
+    .container p{
+        font-size: small;
+    }
+    .container{
+        padding-left: 0%;
+        padding-right: 0%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 2fr;
+        grid-template-rows: 2fr 2fr 2fr;
+        gap: 20px;
+        padding-top: 50px;
+        grid-template-areas:
+            "lista uno dos"
+            "lista cuatro cinco "
+            "lista tres seis";
+        img{
+            width: 198px;
+            height: 167px;
+        }
+        p{
+            font-size: small;
+        }
+    }
+    .listaProductos{
+        font-size: small;
+        margin-left: 0%;
+        h3{
+            font-size: medium;
+        }
+    }
+}

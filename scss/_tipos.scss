@@ -1,0 +1,25 @@
+@media (max-width:768px){
+    .bannerUno{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 15px;
+        div{
+            margin-left: 0px;
+        }
+    }
+    .divTextoBannerUno{
+        justify-content: center;
+        align-items: center;
+    }
+    .bannerDos{
+        flex-direction: column-reverse;
+        align-items: center;
+        div{
+            margin-right: 0px;
+        }
+    }
+    .divTextoBannerDos{
+        justify-content: center;
+        align-items: center;
+    }
+}

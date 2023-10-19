@@ -1,0 +1,92 @@
+@media (max-width:768px){
+    header{
+        flex-direction: column;
+        width: 533px;
+    }
+    main{
+        width: 533px;
+    }
+    .navegador{
+        flex-direction: column;
+        width: 153px;
+        text-align: start;
+    }
+    .log{
+        width: 533px;
+        justify-content: center;
+        img{
+            width: 268px;
+        }
+    }
+    .imagenBanner{
+        width: 717px;
+    }
+    .imgnav{
+       display: none;
+    }
+    .navbar{
+        width: 155px;
+        position: relative;
+        right: 18px;
+    }
+    .navnone{
+        display: inline;
+    }
+    .container-fluid{
+        position: relative;
+        bottom: 53px;
+    }
+    .carousel-inner{
+        width: 533px;
+        height: 333px;
+    }
+    .imagenPromo{
+        flex-direction: column;
+        img{
+            margin: 10px;
+            width: 295px;
+            height: 165px;
+        }
+    }
+    .buttonClass{
+        width: 120px;
+        height: 35px;
+    }
+    footer{
+        width: 533px;
+    }
+    .redes{
+        display: none;
+    }
+    .whatsapp{
+        display: inline;
+        position: fixed;
+        top: 0%;
+        width: 55px;
+        height: 55px;
+    }
+    .footerDerecho{
+        display: none;
+        div{
+            width: 160px;
+            height: 50px;
+            display: flex;
+            position: relative; 
+        }
+    }
+    .textoalaDerecha{
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .textoCopy{
+        display: flex;
+        justify-content: center;
+        width: 533px;
+        text-align: center;
+        p{
+            font-size: 17px;
+        }
+    }
+}
