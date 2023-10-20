@@ -2,10 +2,21 @@
   font-family: "raleway";
   src: url("../assets/fonts/raleway.zip");
 }
+p, h2, h1 {
+  font-family: "raleway", sans-serif;
+  text-align: center;
+}
+
+.imagenPromo, .divfoot, footer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 body {
   margin: 0%;
 }
-body header {
+
+header {
   position: sticky;
   top: 0;
   margin: 0px 0px 0px 2px;
@@ -22,16 +33,12 @@ body header {
 
 h1 {
   color: #2E2E73;
-  font-family: "raleway", sans-serif;
-  text-align: center;
   display: flex;
   justify-content: center;
 }
 
 h2 {
   color: #2E2E73;
-  font-family: "raleway", sans-serif;
-  text-align: center;
 }
 
 h3 {
@@ -39,9 +46,7 @@ h3 {
 }
 
 p {
-  font-family: "raleway", sans-serif;
   font-weight: 100;
-  text-align: center;
   margin-bottom: 0%;
   margin-top: 0%;
 }
@@ -54,11 +59,11 @@ a {
 a:hover {
   color: #4a5fda;
   border-bottom: solid 1px #e01212;
+  transform: translate(-1px, -5px);
 }
 
 .nav-item:hover {
   color: #4a5fda;
-  border-bottom: solid 1px #e01212;
 }
 
 .dropdown-item:hover {
@@ -147,8 +152,6 @@ main {
 
 footer {
   background-color: rgba(241, 234, 218, 0.815);
-  display: flex;
-  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: end;
   height: 150px;
@@ -164,8 +167,6 @@ footer div {
 }
 
 .divfoot {
-  display: flex;
-  flex-flow: row nowrap;
   justify-content: start;
   align-items: center;
   height: 22px;
@@ -184,8 +185,6 @@ footer div {
 }
 
 .imagenPromo {
-  display: flex;
-  flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
   padding-top: 30px;
@@ -205,14 +204,14 @@ footer div {
   flex-flow: row-reverse nowrap;
   padding-top: 45px;
 }
-.bannerUno img {
+.bannerUno div {
+  display: flex;
+  margin-left: 50px;
+}
+.bannerUno div img {
   width: 380px;
   height: 250px;
   border-radius: 33px;
-}
-.bannerUno img div {
-  display: flex;
-  margin-left: 50px;
 }
 
 .divTextoBannerUno {
@@ -227,16 +226,16 @@ footer div {
   display: flex;
   flex-flow: row;
 }
-.bannerDos img {
+.bannerDos div {
+  display: flex;
+  margin-right: 50px;
+}
+.bannerDos div img {
   width: 380px;
   height: 250px;
   border-radius: 33px;
   display: flex;
   align-items: center;
-}
-.bannerDos img div {
-  display: flex;
-  margin-right: 50px;
 }
 
 .divTextoBannerDos {
@@ -294,7 +293,7 @@ footer div {
 .container p {
   font-weight: bold;
 }
-.container p img {
+.container img {
   width: 320px;
   height: 205px;
   border-radius: 25px;
@@ -429,6 +428,7 @@ footer div {
 
 @media (max-width: 768px) {
   header {
+    display: flex;
     flex-direction: column;
     width: 533px;
   }

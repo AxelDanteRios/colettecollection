@@ -16,3 +16,12 @@ $lineaForm: #0066fe;
     font-family: "raleway";
     src: url("../assets/fonts/raleway.zip")
 }
+
+%textos{
+    font-family: "raleway", sans-serif;
+    text-align: center;
+}
+%flexrow{
+    display: flex;
+    flex-flow: row nowrap;
+}
