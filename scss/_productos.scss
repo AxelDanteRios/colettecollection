@@ -1,36 +1,55 @@
 @media (max-width:768px){
+    .radio-input {
+        --container_width: 40%;
+        display: flex;
+        left: 30%;
+        margin-top: 5%;
+    }
+    .radio-input label:has(input:checked) ~ .selection {
+        width: 50%;
+        background-color: $fondoBoton;
+        display: inline-block;
+      }
     .container img{
-        width: 198px;
-        height: 167px;
+        width: 100%;
+        height: 100%;
     }
     .container p{
         font-size: small;
     }
-    .container{
-        padding-left: 0%;
+    .container-lg{
+        padding-left: 1%;
         padding-right: 0%;
         display: grid;
-        grid-template-columns: 1fr 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr;
         grid-template-rows: 2fr 2fr 2fr;
         gap: 20px;
         padding-top: 50px;
         grid-template-areas:
-            "lista uno dos"
-            "lista cuatro cinco "
-            "lista tres seis";
+            "uno dos"
+            "cuatro cinco"
+            "tres seis";
         img{
-            width: 198px;
-            height: 167px;
+            width: 100%;
+            height: 100%;
         }
         p{
             font-size: small;
         }
     }
     .listaProductos{
+        display: none;
         font-size: small;
         margin-left: 0%;
-        h3{
-            font-size: medium;
+    }
+    .card{
+        width: 99%;
+        button{
+            padding-right: 12px;
+            padding: 5px;
         }
     }
+    .card__description {
+        margin: 0px 0 10px;
+        }
 }

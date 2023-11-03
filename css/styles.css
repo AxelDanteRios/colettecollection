@@ -19,14 +19,14 @@ body {
 header {
   position: sticky;
   top: 0;
-  margin: 0px 0px 0px 2px;
+  margin: 0px 0px 0px 0px;
   display: flex;
   flex-flow: row nowrap;
   background-color: rgba(241, 234, 218, 0.815);
   justify-content: start;
   align-items: baseline;
   height: 150px;
-  width: 1421px;
+  width: 100%;
   padding: 0px 0px 0px 0px;
   z-index: 1;
 }
@@ -107,12 +107,13 @@ ul {
 
 .navegador {
   height: 100%;
-  width: 260%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
   bottom: 7px;
+  padding: 0%;
 }
 
 .navnone {
@@ -120,10 +121,14 @@ ul {
 }
 
 .navbar {
-  width: 800px;
+  width: 65%;
   position: relative;
-  right: 40px;
-  top: 5px;
+  left: 7%;
+  top: 7%;
+}
+
+.container-fluid {
+  padding: 0%;
 }
 
 .log {
@@ -179,9 +184,7 @@ footer div {
   margin: 0px 0px 0px 0px;
   background-color: rgba(244, 238, 225, 0);
   height: 23px;
-  width: 135px;
-  position: relative;
-  left: 1005px;
+  width: 110px;
 }
 
 .imagenPromo {
@@ -191,9 +194,9 @@ footer div {
   padding-bottom: 30px;
 }
 .imagenPromo img {
-  width: 300px;
+  width: 100%;
   height: 200px;
-  border-radius: 8%;
+  border-radius: 10px;
 }
 .imagenPromo img p {
   font-weight: bold;
@@ -253,8 +256,14 @@ footer div {
   align-items: center;
 }
 .ubiLocal iframe {
-  width: 800px;
+  width: 60%;
   height: 350px;
+}
+
+.divmapa {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .divDireccion {
@@ -282,21 +291,21 @@ footer div {
   align-items: center;
 }
 
-.container {
+.container-lg {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 2fr;
   grid-template-rows: 2fr 2fr;
-  gap: 30px;
-  padding-top: 50px;
+  gap: 12px;
+  padding: 50px 0px 0px 0px;
   grid-template-areas: "lista uno dos tres" "lista cuatro cinco seis";
 }
-.container p {
+.container-lg p {
   font-weight: bold;
 }
-.container img {
+.container-lg img {
   width: 320px;
   height: 205px;
-  border-radius: 25px;
+  border-radius: 0px;
 }
 
 .listaProductos {
@@ -305,42 +314,90 @@ footer div {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 90px;
-  margin-left: 15%;
-}
-.listaProductos h3 {
-  font-weight: bold;
-  font-size: large;
+  width: 80px;
+  margin-left: 0px;
 }
 
 .productoUno {
   grid-area: uno;
-  text-align: center;
 }
 
 .productoDos {
   grid-area: dos;
-  text-align: center;
 }
 
 .productoTres {
   grid-area: tres;
-  text-align: center;
 }
 
 .productoCuatro {
   grid-area: cuatro;
-  text-align: center;
 }
 
 .productoCinco {
   grid-area: cinco;
-  text-align: center;
 }
 
 .productoSeis {
   grid-area: seis;
-  text-align: center;
+}
+
+.radio-input input {
+  display: none;
+}
+
+.radio-input {
+  --container_width: 200px;
+  position: relative;
+  display: none;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+  color: black;
+  width: var(--container_width);
+  overflow: hidden;
+  border: 1px solid rgb(180, 189, 189);
+}
+
+.radio-input label {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 14px;
+}
+
+.selection {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: calc(var(--container_width) / 2);
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transition: 0.15s ease;
+}
+
+.radio-input label:has(input:checked) {
+  color: #fff;
+}
+
+.radio-input label:has(input:checked) ~ .selection {
+  background-color: rgb(113, 134, 230);
+  display: inline-block;
+}
+
+.radio-input label:nth-child(1):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 0 / 2));
+}
+
+.radio-input label:nth-child(2):has(input:checked) ~ .selection {
+  transform: translateX(calc(var(--container_width) * 5 / 2));
 }
 
 .d-flex {
@@ -396,6 +453,74 @@ footer div {
   background-color: #fff;
 }
 
+.card {
+  position: relative;
+  width: 279px;
+  aspect-ratio: 16/9;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5019607843);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card img {
+  width: 101%;
+  height: 100%;
+}
+.card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__description {
+  margin: 10px 0 10px;
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.precio {
+  position: relative;
+  bottom: 7px;
+}
+
+.card__button {
+  margin-top: 0px;
+  padding: 7px;
+  padding-right: 37px;
+  background: rgb(113, 134, 230);
+  border: none;
+  color: #fff;
+}
+
+.secondary {
+  background: transparent;
+  color: #777;
+  border: 1px solid #777;
+}
+
 .botonPromo {
   display: flex;
   justify-content: center;
@@ -430,18 +555,19 @@ footer div {
   header {
     display: flex;
     flex-direction: column;
-    width: 533px;
+    width: 100%;
   }
   main {
-    width: 533px;
+    width: 100%;
   }
   .navegador {
     flex-direction: column;
     width: 153px;
     text-align: start;
+    padding-left: 15px;
   }
   .log {
-    width: 533px;
+    width: 100%;
     justify-content: center;
   }
   .log img {
@@ -451,7 +577,7 @@ footer div {
     width: 717px;
   }
   .imgnav {
-    display: none;
+    display: inline;
   }
   .navbar {
     width: 155px;
@@ -464,25 +590,35 @@ footer div {
   .container-fluid {
     position: relative;
     bottom: 53px;
+    right: 25%;
   }
   .carousel-inner {
-    width: 533px;
+    width: 100%;
     height: 333px;
   }
   .imagenPromo {
     flex-direction: column;
+    width: 100%;
   }
   .imagenPromo img {
     margin: 10px;
-    width: 295px;
-    height: 165px;
+    width: 100%;
+    height: 100%;
+  }
+  .imagenPromo .card {
+    width: 55%;
+    margin-top: 4%;
+  }
+  .imagenPromo .card__content {
+    padding: 10px 10px 10px 13px;
   }
   .buttonClass {
     width: 120px;
     height: 35px;
   }
   footer {
-    width: 533px;
+    width: 100%;
+    justify-content: center;
   }
   .redes {
     display: none;
@@ -510,7 +646,7 @@ footer div {
   .textoCopy {
     display: flex;
     justify-content: center;
-    width: 533px;
+    width: 100%;
     text-align: center;
   }
   .textoCopy p {
@@ -543,36 +679,55 @@ footer div {
   }
 }
 @media (max-width: 768px) {
+  .radio-input {
+    --container_width: 40%;
+    display: flex;
+    left: 30%;
+    margin-top: 5%;
+  }
+  .radio-input label:has(input:checked) ~ .selection {
+    width: 50%;
+    background-color: rgb(113, 134, 230);
+    display: inline-block;
+  }
   .container img {
-    width: 198px;
-    height: 167px;
+    width: 100%;
+    height: 100%;
   }
   .container p {
     font-size: small;
   }
-  .container {
-    padding-left: 0%;
+  .container-lg {
+    padding-left: 1%;
     padding-right: 0%;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-columns: 2fr 2fr;
     grid-template-rows: 2fr 2fr 2fr;
     gap: 20px;
     padding-top: 50px;
-    grid-template-areas: "lista uno dos" "lista cuatro cinco " "lista tres seis";
+    grid-template-areas: "uno dos" "cuatro cinco" "tres seis";
   }
-  .container img {
-    width: 198px;
-    height: 167px;
+  .container-lg img {
+    width: 100%;
+    height: 100%;
   }
-  .container p {
+  .container-lg p {
     font-size: small;
   }
   .listaProductos {
+    display: none;
     font-size: small;
     margin-left: 0%;
   }
-  .listaProductos h3 {
-    font-size: medium;
+  .card {
+    width: 99%;
+  }
+  .card button {
+    padding-right: 12px;
+    padding: 5px;
+  }
+  .card__description {
+    margin: 0px 0 10px;
   }
 }
 

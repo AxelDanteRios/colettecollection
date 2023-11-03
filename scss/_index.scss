@@ -2,18 +2,19 @@
     header{
         display: flex;
         flex-direction: column;
-        width: 533px;
+        width: 100%;
     }
     main{
-        width: 533px;
+        width: 100%;
     }
     .navegador{
         flex-direction: column;
         width: 153px;
         text-align: start;
+        padding-left: 15px;
     }
     .log{
-        width: 533px;
+        width: 100%;
         justify-content: center;
         img{
             width: 268px;
@@ -23,7 +24,7 @@
         width: 717px;
     }
     .imgnav{
-       display: none;
+       display: inline;
     }
     .navbar{
         width: 155px;
@@ -36,17 +37,28 @@
     .container-fluid{
         position: relative;
         bottom: 53px;
+        right: 25%;
     }
     .carousel-inner{
-        width: 533px;
+        width: 100%;
         height: 333px;
     }
     .imagenPromo{
         flex-direction: column;
+        width: 100%;
         img{
             margin: 10px;
-            width: 295px;
-            height: 165px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .imagenPromo{
+        .card{
+            width: 55%;
+            margin-top: 4%;
+        }
+        .card__content{
+            padding: 10px 10px 10px 13px;
         }
     }
     .buttonClass{
@@ -54,7 +66,8 @@
         height: 35px;
     }
     footer{
-        width: 533px;
+        width: 100%;
+        justify-content: center;
     }
     .redes{
         display: none;
@@ -84,7 +97,7 @@
     .textoCopy{
         display: flex;
         justify-content: center;
-        width: 533px;
+        width: 100%;
         text-align: center;
         p{
             font-size: 17px;

@@ -4,14 +4,14 @@ body{
 header{
         position: sticky;
         top: 0;
-        margin: 0px 0px 0px 2px;
+        margin: 0px 0px 0px 0px;
         display: flex;
         flex-flow: row nowrap;
         background-color: $fondo;
         justify-content: start;
         align-items: baseline;
         height: 150px;
-        width: 1421px;
+        width: 100%;
         padding: 0px 0px 0px 0px;
         z-index: 1;
 }
@@ -81,22 +81,26 @@ ul{
 }
 .navegador{
     height: 100%;
-    width: 260%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: relative;
     bottom: 7px;
+    padding: 0%;
 }
 
 .navnone{
     display: none;
 }
 .navbar{
-    width: 800px;
+    width: 65%;
     position: relative;
-    right: 40px; 
-    top: 5px;
+    left: 7%;
+    top: 7%;
+}
+.container-fluid{
+    padding: 0%;
 }
 .log{
     display: flex;
@@ -148,9 +152,7 @@ footer{
     margin: 0px 0px 0px 0px;
     background-color: $fondoLogo;
     height: 23px;
-    width: 135px;
-    position: relative;
-    left: 1005px;
+    width: 110px;
 }
 .imagenPromo{
     @extend %flexrow;
@@ -159,9 +161,9 @@ footer{
     padding-top: 30px;
     padding-bottom: 30px;
     img{
-        width: 300px;
+        width: 100%;
         height: 200px;
-        border-radius: 8%;
+        border-radius: 10px;
         p{
             font-weight: bold;
         }
@@ -216,9 +218,15 @@ footer{
     flex-flow: column nowrap;
     align-items: center;
     iframe{
-        width: 800px;
+        width: 60%;
         height: 350px;
     }
+}
+
+.divmapa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .divDireccion{
     display: flex;
@@ -242,12 +250,12 @@ footer{
     width: 50%;
     align-items: center;
 }
-.container{
+.container-lg{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr;
     grid-template-rows: 2fr 2fr;
-    gap: 30px;
-    padding-top: 50px;
+    gap: 12px;
+    padding: 50px 0px 0px 0px;
     grid-template-areas: 
     "lista uno dos tres"
     "lista cuatro cinco seis";
@@ -257,7 +265,7 @@ footer{
     img{
         width: 320px;
         height: 205px;
-        border-radius: 25px;
+        border-radius: 0px;
     }
 }
 .listaProductos{
@@ -266,37 +274,86 @@ footer{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 90px;
-    margin-left: 15%;
-    h3{
-        font-weight: bold;
-        font-size: large;
-    }
+    width: 80px;
+    margin-left: 0px;
 }
 .productoUno{
     grid-area:uno;
-    text-align: center;
 }
 .productoDos{
     grid-area:dos;
-    text-align: center;
 }
 .productoTres{
     grid-area:tres;
-    text-align: center;
 }
 .productoCuatro{
     grid-area:cuatro;
-    text-align: center;
 }
 .productoCinco{
     grid-area:cinco;
-    text-align: center;
 }
 .productoSeis{
     grid-area:seis;
-    text-align: center;
 }
+
+.radio-input input {
+    display: none;
+  }
+  
+  .radio-input {
+    --container_width: 200px;
+    position: relative;
+    display: none;
+    align-items: center;
+    border-radius: 10px;
+    background-color: $botonPromo;
+    color: $link;
+    width: var(--container_width);
+    overflow: hidden;
+    border: 1px solid $listaGris;
+  }
+  
+  .radio-input label {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-size: 14px;
+  }
+  
+  .selection {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: calc(var(--container_width) / 2);
+    z-index: 0;
+    left: 0;
+    top: 0;
+    transition: .15s ease;
+  }
+  
+  .radio-input label:has(input:checked) {
+    color: $botonPromo;
+  }
+  
+  .radio-input label:has(input:checked) ~ .selection {
+    background-color: $fondoBoton;
+    display: inline-block;
+  }
+  
+  .radio-input label:nth-child(1):has(input:checked) ~ .selection {
+    transform: translateX(calc(var(--container_width) * 0/2));
+  }
+  
+  .radio-input label:nth-child(2):has(input:checked) ~ .selection {
+    transform: translateX(calc(var(--container_width) * 5/2));
+  }
+
 .d-flex{
     justify-content: center;
     width: 320px;
@@ -346,4 +403,71 @@ footer{
         background-color: $botonPromo
     }
 }
+  
+.card {
+    position: relative;
+    width: 279px;
+    aspect-ratio: 16/9;
+    background-color: $fondoCard;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px $sombraCard;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    img{
+        width: 101%;
+        height: 100%;
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px $sombraHover;
+        }
+    }
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: $fondoCard;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__description {
+    margin: 10px 0 10px;
+    font-size: 12px;
+    color: $descripcionCard;
+    line-height: 1.4;
+  }
+  
+  .precio{
+    position: relative;
+    bottom: 7px;
+  }
+  .card__button {
+    margin-top: 0px;
+    padding: 7px;
+    padding-right: 37px;
+    background: $fondoBoton;
+    border: none;
+    color: $botonPromo
+  }
+  
+  .secondary {
+    background: transparent;
+    color: $descripcionCard;
+    border: 1px solid $descripcionCard;
+  }
   
