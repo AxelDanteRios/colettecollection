@@ -12,6 +12,7 @@
         width: 153px;
         text-align: start;
         padding-left: 15px;
+        bottom: 0%;
     }
     .log{
         width: 100%;
@@ -25,19 +26,29 @@
     }
     .imgnav{
        display: inline;
+       height: 50px;
     }
     .navbar{
-        width: 155px;
+        width: 106px;
         position: relative;
         right: 18px;
     }
     .navnone{
         display: inline;
+        hr{
+                width: 110px;
+        }
     }
     .container-fluid{
         position: relative;
-        bottom: 53px;
+        bottom: 60px;
         right: 25%;
+    }
+    .navbar-collapse{
+        background-color: $fondodos;
+        border-style: solid;
+        border-color: $listaGris;
+        border-radius: 10px;
     }
     .carousel-inner{
         width: 100%;
@@ -67,17 +78,9 @@
     }
     footer{
         width: 100%;
-        justify-content: center;
     }
     .redes{
         display: none;
-    }
-    .whatsapp{
-        display: inline;
-        position: fixed;
-        top: 0%;
-        width: 55px;
-        height: 55px;
     }
     .footerDerecho{
         display: none;
@@ -101,6 +104,24 @@
         text-align: center;
         p{
             font-size: 17px;
+        }
+    }
+    .sectionCopy{
+        width: 100%;
+    }
+    .redMobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 99%;
+        height: 10%;
+        margin-bottom: 2px;
+        position: fixed;
+        bottom: 0%;
+        img{
+            width: 33px;
+            border-radius: 15px;
         }
     }
 }

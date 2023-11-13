@@ -171,6 +171,10 @@ footer div {
   width: 230px;
 }
 
+.redMobile {
+  display: none;
+}
+
 .divfoot {
   justify-content: start;
   align-items: center;
@@ -565,6 +569,7 @@ footer div {
     width: 153px;
     text-align: start;
     padding-left: 15px;
+    bottom: 0%;
   }
   .log {
     width: 100%;
@@ -578,19 +583,29 @@ footer div {
   }
   .imgnav {
     display: inline;
+    height: 50px;
   }
   .navbar {
-    width: 155px;
+    width: 106px;
     position: relative;
     right: 18px;
   }
   .navnone {
     display: inline;
   }
+  .navnone hr {
+    width: 110px;
+  }
   .container-fluid {
     position: relative;
-    bottom: 53px;
+    bottom: 60px;
     right: 25%;
+  }
+  .navbar-collapse {
+    background-color: rgb(241, 234, 218);
+    border-style: solid;
+    border-color: rgb(180, 189, 189);
+    border-radius: 10px;
   }
   .carousel-inner {
     width: 100%;
@@ -618,17 +633,9 @@ footer div {
   }
   footer {
     width: 100%;
-    justify-content: center;
   }
   .redes {
     display: none;
-  }
-  .whatsapp {
-    display: inline;
-    position: fixed;
-    top: 0%;
-    width: 55px;
-    height: 55px;
   }
   .footerDerecho {
     display: none;
@@ -651,6 +658,24 @@ footer div {
   }
   .textoCopy p {
     font-size: 17px;
+  }
+  .sectionCopy {
+    width: 100%;
+  }
+  .redMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 99%;
+    height: 10%;
+    margin-bottom: 2px;
+    position: fixed;
+    bottom: 0%;
+  }
+  .redMobile img {
+    width: 33px;
+    border-radius: 15px;
   }
 }
 @media (max-width: 768px) {

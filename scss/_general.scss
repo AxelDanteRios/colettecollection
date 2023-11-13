@@ -139,6 +139,9 @@ footer{
     flex-flow: column nowrap;
     width: 230px;
 }
+.redMobile{
+    display: none
+}
 .divfoot{
     @extend %flexrow;
     justify-content: start;
